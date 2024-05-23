@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f3ec78, #af4261);
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.password-box {
+  margin-top: 20px;
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin-top: 10px;
+  cursor: pointer;
+  background: #af4261;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #f3ec78;
+  color: #af4261;
+  transform: scale(1.08);
+}
+
+button:active {
+  background: #78f378;
+  color: #af4261;
+  transform: scale(-0.000000003);
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+input.shake {
+  animation: shake 0.5s;
+}
