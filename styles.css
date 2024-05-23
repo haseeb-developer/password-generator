@@ -1,10 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "Ubuntu Sans", sans-serif; */
+  /* font-family: "Roboto", sans-serif; */
+  /* font-family: "Roboto Condensed", sans-serif; */
+  /* font-family: "Open Sans", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Lato", sans-serif; */
+  /* font-family: "Comfortaa", sans-serif; */
+}
+
+.head-txt {
+  font-family: "Montserrat", sans-serif;
+  font-size: 23px;
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: linear-gradient(135deg, #f3ec78, #af4261);
-  font-family: "Arial", sans-serif;
 }
 
 .container {
@@ -90,8 +110,12 @@ body {
   margin-top: 20px;
 }
 
+.pass-length {
+  margin-top: 40px;
+}
+
 input[type="text"] {
-  padding: 10px;
+  padding: 13px;
   width: 96%;
   font-size: 1.2em;
   border: none;
@@ -117,22 +141,24 @@ input[type="number"]:focus {
   outline: none;
 }
 
-button {
+.generate-btn {
   padding: 10px 20px;
+  width: 100%;
   font-size: 1.2em;
-  margin-top: 20px;
+  margin-top: 30px;
   cursor: pointer;
   background: #af4261;
   color: white;
   border: none;
   border-radius: 5px;
+  font-family: "Comfortaa", sans-serif;
   transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-button:hover {
+.generate-btn:hover {
   background: #f3ec78;
   color: #af4261;
-  transform: scale(1.1);
+  transform: scale(1.04);
 }
 
 @keyframes shake {
@@ -158,4 +184,64 @@ input.shake {
 }
 .checkbox-wrapper-48.shake {
   animation: shake 0.5s;
+}
+
+.password-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-copy {
+  background-color: #af4261;
+  border: none;
+  color: white;
+  outline: none;
+  padding: 13px 20px;
+}
+
+.icon-copy {
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* CSS */
+.icon-copy {
+  --b: 3px; /* border thickness */
+  --s: 0.45em; /* size of the corner */
+  --color: #af4261;
+
+  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background: conic-gradient(
+      from 90deg at var(--b) var(--b),
+      #0000 90deg,
+      var(--color) 0
+    )
+    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
+    calc(100% - var(--b) - 2 * var(--_p));
+  transition: 0.3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: 0.6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.icon-copy:hover,
+.icon-copy:focus-visible {
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: 0.02em;
+}
+
+.icon-copy:active {
+  background: var(--color);
+  color: #fff;
 }

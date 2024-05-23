@@ -35,3 +35,9 @@ function generatePassword() {
     input.classList.remove("shake");
   }, 500);
 }
+function copyPasswordToClipboard() {
+  var passwordInput = document.getElementById("password");
+  passwordInput.select();
+  document.execCommand("copy");
+  alert("Password copied to clipboard!");
+}
