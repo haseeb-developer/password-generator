@@ -12,7 +12,9 @@ body {
   background: rgba(255, 255, 255, 0.9);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -27,21 +29,90 @@ body {
   }
 }
 
+.settings-box {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.settings-box label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.checkbox-wrapper-48 {
+  --gray: #636e72;
+  --very-light-gray: #eee;
+  --light-gray: #9098a9;
+  --x-light-gray: #dfe6e9;
+  --gradient: linear-gradient(
+    180deg,
+    #e02020 0%,
+    #fa6400 17%,
+    #f7b500 33%,
+    #6dd400 50%,
+    #0091ff 67%,
+    #6236ff 83%,
+    #b620e0 100%
+  );
+}
+
+.checkbox-wrapper-48 label {
+  font-size: 1.35em;
+}
+
+/* CORE STYLES */
+.checkbox-wrapper-48 input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1em;
+  height: 1em;
+  font: inherit;
+  border: 0.1em solid var(--light-gray);
+  margin-bottom: -0.125em;
+}
+.checkbox-wrapper-48 input[type="checkbox"] {
+  border-radius: 0.25em;
+}
+.checkbox-wrapper-48 input:checked {
+  border-color: transparent;
+  background: var(--gradient) border-box;
+  box-shadow: 0 0 0 0.1em inset #fff;
+}
+.checkbox-wrapper-48 input:not(:checked):hover {
+  border-color: transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+    var(--gradient) border-box;
+}
+
 .password-box {
   margin-top: 20px;
 }
 
-input {
+input[type="text"] {
   padding: 10px;
-  width: 80%;
+  width: 96%;
   font-size: 1.2em;
   border: none;
   border-radius: 5px;
   text-align: center;
-  transition: box-shadow 0.3s ease-in-out;
+  /* transition: box-shadow 0.3s ease-in-out; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-input:focus {
+input[type="number"] {
+  padding: 5px;
+  width: 50px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   outline: none;
 }
@@ -49,7 +120,7 @@ input:focus {
 button {
   padding: 10px 20px;
   font-size: 1.2em;
-  margin-top: 10px;
+  margin-top: 20px;
   cursor: pointer;
   background: #af4261;
   color: white;
@@ -61,13 +132,7 @@ button {
 button:hover {
   background: #f3ec78;
   color: #af4261;
-  transform: scale(1.08);
-}
-
-button:active {
-  background: #78f378;
-  color: #af4261;
-  transform: scale(-0.000000003);
+  transform: scale(1.1);
 }
 
 @keyframes shake {
@@ -89,5 +154,8 @@ button:active {
 }
 
 input.shake {
+  animation: shake 0.5s;
+}
+.checkbox-wrapper-48.shake {
   animation: shake 0.5s;
 }
