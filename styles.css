@@ -116,13 +116,16 @@ body {
 
 input[type="text"] {
   padding: 13px;
-  width: 96%;
   font-size: 1.2em;
   border: none;
-  border-radius: 5px;
   text-align: center;
+  border-radius: 5px;
   /* transition: box-shadow 0.3s ease-in-out; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.password-input input[type="text"] {
+  width: 450px;
 }
 
 input[type="number"] {
