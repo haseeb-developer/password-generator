@@ -4,14 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Poppins", sans-serif; */
-  /* font-family: "Ubuntu Sans", sans-serif; */
-  /* font-family: "Roboto", sans-serif; */
-  /* font-family: "Roboto Condensed", sans-serif; */
-  /* font-family: "Open Sans", sans-serif; */
   font-family: "Montserrat", sans-serif;
-  /* font-family: "Lato", sans-serif; */
-  /* font-family: "Comfortaa", sans-serif; */
 }
 
 .head-txt {
@@ -22,6 +15,7 @@
 body {
   display: flex;
   justify-content: center;
+  padding: 0 20px;
   align-items: center;
   height: 100vh;
   background: linear-gradient(135deg, #f3ec78, #af4261);
@@ -30,9 +24,9 @@ body {
 .container {
   text-align: center;
   background: rgba(255, 255, 255, 0.9);
+  max-width: 100%;
   padding: 30px;
   border-radius: 10px;
-  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   animation: fadeIn 2s ease-in-out;
@@ -81,7 +75,6 @@ body {
   font-size: 1.35em;
 }
 
-/* CORE STYLES */
 .checkbox-wrapper-48 input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -92,14 +85,16 @@ body {
   border: 0.1em solid var(--light-gray);
   margin-bottom: -0.125em;
 }
+
 .checkbox-wrapper-48 input[type="checkbox"] {
   border-radius: 0.25em;
 }
+
 .checkbox-wrapper-48 input:checked {
-  border-color: transparent;
   background: var(--gradient) border-box;
   box-shadow: 0 0 0 0.1em inset #fff;
 }
+
 .checkbox-wrapper-48 input:not(:checked):hover {
   border-color: transparent;
   background: linear-gradient(#fff, #fff) padding-box,
@@ -118,14 +113,14 @@ input[type="text"] {
   padding: 13px;
   font-size: 1.2em;
   border: none;
+  max-width: 100%;
   text-align: center;
   border-radius: 5px;
-  /* transition: box-shadow 0.3s ease-in-out; */
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .password-input input[type="text"] {
-  width: 450px;
+ width: 800px;
 }
 
 input[type="number"] {
@@ -209,15 +204,16 @@ input.shake {
   cursor: pointer;
 }
 
-/* CSS */
 .icon-copy {
-  --b: 3px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
+  --b: 3px;
+  --s: 0.45em;
   --color: #af4261;
 
-  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
+  padding: calc(0.35em + var(--s)) calc(0.9em + var(--s));
   color: var(--color);
+  text-transform: uppercase;
   --_p: var(--s);
+  font-weight: bold;
   background: conic-gradient(
       from 90deg at var(--b) var(--b),
       #0000 90deg,
@@ -229,9 +225,7 @@ input.shake {
   outline: var(--b) solid #0000;
   outline-offset: 0.6em;
   font-size: 16px;
-
   border: 0;
-
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -248,3 +242,32 @@ input.shake {
   background: var(--color);
   color: #fff;
 }
+
+.length-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pass-length-limit {
+  margin-bottom: 20px;
+}
+
+.length-btn {
+  padding: 5px 10px;
+  background-color: #e1e1e1;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.length-btn.active {
+  border: 2px solid #007bff;
+  background-color: #d3e7ff;
+}
+
+.length-btn:hover {
+  background-color: #e0e0e0;
+}
+
