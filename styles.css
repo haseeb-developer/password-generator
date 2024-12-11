@@ -146,7 +146,7 @@ input[type="number"]:focus {
   margin-top: 30px;
   cursor: pointer;
   background: #af4261;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 5px;
   font-family: "Comfortaa", sans-serif;
@@ -154,9 +154,8 @@ input[type="number"]:focus {
 }
 
 .generate-btn:hover {
-  background: #f3ec78;
-  color: #af4261;
-  transform: scale(1.04);
+  background: #b620e0;
+  transform: scale(1.01);
 }
 
 @keyframes shake {
